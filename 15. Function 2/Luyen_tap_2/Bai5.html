@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt("Nhập vào số thứ nhất:")
+    let number2 = +prompt("Nhập vào số thứ hai:")
+    let number3 = +prompt("Nhập vào số thứ ba:")
+
+    function findMin(num1, num2, num3) {
+        let min = num1
+        if (min > num2) {
+            min = num2
+        } else if (min > num3) {
+            min = num3
+        }
+        return min
+    }
+
+    alert(`Số nguyên nhỏ nhất là: ${findMin(number1, number2, number3)}`)
+</script>
+</body>
+</html>

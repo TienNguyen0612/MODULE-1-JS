@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy số Fibonacci</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let countSL = prompt("Nhập vào số lượng số trong dãy Fibonacci bạn muốn in ra:")
+    let previousNumber = 0;
+    let nextNumber = 1;
+
+    document.write("Liệt kê " + countSL + " số đầu tiên trong dãy Fibonacci:" + "<br>");
+    while (count < countSL) {
+        count++;
+        document.write(previousNumber + "<br>");
+        let sum = previousNumber + nextNumber;
+        previousNumber = nextNumber;
+        nextNumber = sum;
+    }
+</script>
+</body>
+</html>

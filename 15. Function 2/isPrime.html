@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SỐ NGUYÊN TỐ</title>
+</head>
+<body>
+<h1>KIỂM TRA SỐ NGUYÊN TỐ</h1>
+<form>
+    <p>
+        <label>Số nguyên dương:</label>
+        <input type="number" id="inputNumber"
+               oninput="isPrime(this.value)"
+               onchange="isPrime(this.value)">
+    </p>
+    <p><span id="outputNumber"></span></p>
+</form>
+
+<script>
+    function isPrime() {
+        let num = document.getElementById("inputNumber").value;
+        let flag = true
+        if (num < 2) {
+            flag = false
+        } else if (num === 2) {
+            flag = true;
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    flag = false
+                    break
+                }
+            }
+        }
+        if (flag) {
+            document.getElementById("outputNumber").innerHTML = "Là số nguyên tố"
+        } else {
+            document.getElementById("outputNumber").innerHTML = "Không là số nguyên tố"
+        }
+    }
+</script>
+</body>
+</html>

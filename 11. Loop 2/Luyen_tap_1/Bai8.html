@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+
+</head>
+<body>
+<button onclick="start()">Start</button>
+
+<script>
+    function start() {
+        let num1 = parseInt(prompt("Nhập vào giá trị dưới: "))
+        let num2 = parseInt(prompt("Nhập vào giá trị trên: "))
+        while (num1 === num2) {
+            alert("Nhập lại đi bạn ơi !!")
+            num1 = parseInt(prompt("Nhập vào giá trị dưới: "))
+            num2 = parseInt(prompt("Nhập vào giá trị trên: "))
+        }
+
+        let result
+        if (num1 < num2) {
+            result = Math.round(Math.random() * (num2 - num1) + num1)
+        } else if (num1 > num2) {
+            result = Math.round(Math.random() * (num1 - num2) + num2)
+        }
+        let count = 1
+        let check = false
+        alert("Đoán đi bạn ơi !!")
+        let guestNum = parseInt(prompt("Đoán lần " + count + ": "))
+        do {
+            if (guestNum === result) {
+                alert("You win !!")
+                check = true
+                break
+            } else if (guestNum < result) {
+                alert("Đoán tăng lên đi !")
+                guestNum = parseInt(prompt("Đoán lần " + (count + 1) + ": "))
+                count++
+            } else {
+                alert("Đoán giảm xuống đi !")
+                guestNum = parseInt(prompt("Đoán lần " + (count + 1) + ": "))
+                count++
+            }
+        }
+        while (count <= 2)
+        if (check === false) {
+            alert("You die !")
+        }
+    }
+</script>
+</body>
+</html>

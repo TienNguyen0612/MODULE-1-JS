@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số lượng phần tử của mảng:")
+    let array = new Array(num)
+    let count = 0
+    let data = []
+    let flag = true
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Nhập vào phần tử thứ ${i + 1}:`)
+        if (array[i] % 3 === 0) {
+            flag = true
+            data.push(array[i])
+            count++
+        } else {
+            flag = false
+        }
+    }
+    if (flag) {
+        document.write(`Có ${count} phần tử chia hết cho 3: ${data}`)
+    } else {
+        alert("-1")
+    }
+</script>
+</body>
+</html>

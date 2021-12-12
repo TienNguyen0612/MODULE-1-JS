@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soA" placeholder="Nhập số a">
+<input type="text" id="soB" placeholder="Nhập số b">
+
+<button type="button" onclick="showMessage()">Kết quả</button>
+
+<p id="display"></p>
+<script>
+    function showMessage() {
+        let soA = parseInt(document.getElementById("soA").value);
+        let soB = parseInt(document.getElementById("soB").value);
+        if (soA < soB) {
+            document.getElementById("display").innerText = 'Tổng các số từ a đến b = ' + ((soA + soB) * (soB - soA + 1) / 2);
+        } else {
+            alert('Không tính được')
+        }
+
+    }
+</script>
+</body>
+</html>

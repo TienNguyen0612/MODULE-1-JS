@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập chuỗi các số:")
+    let arr = str.split(',')
+    let count = 0
+    let result = []
+
+    for (let value of arr) {
+        if (value < 0) {
+            result.push(value)
+            count++
+        }
+    }
+    document.write(`Chuỗi trên có ${count} số nguyên âm: ${result}`);
+</script>
+</body>
+</html>

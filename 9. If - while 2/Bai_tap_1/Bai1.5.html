@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình môn Toán</title>
+</head>
+<body>
+<script>
+    let diem1 = parseInt(prompt("Nhập điểm kiểm tra 15'"));
+    let diem2 = parseInt(prompt("Nhập điểm thi giữa kỳ"));
+    let diem3 = parseInt(prompt("Nhập điểm thi cuối kỳ"));
+    let diemTB = (diem1 + diem2 * 2 + diem3 * 3) / 6;
+
+    if (diemTB >= 8) {
+        alert('Xếp loại Giỏi');
+    } else if (diemTB >= 6.5) {
+        alert('Xếp loại Khá');
+    } else if (diemTB >= 5) {
+        alert('Xếp loại Trung bình');
+    } else if (diemTB >= 3.5) {
+        alert('Xếp loại Yếu');
+    } else {
+        alert('Xếp loại Kém');
+    }
+</script>
+</body>
+</html>

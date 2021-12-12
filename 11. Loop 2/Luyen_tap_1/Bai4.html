@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let count = 0;
+  let countSL = prompt("Nhập vào số lượng số trong dãy Fibonacci bạn muốn in ra:")
+  let previousNumber = 1;
+  let nextNumber = 1;
+
+  document.write("Trong " + countSL + " số đầu tiên của dãy Fibonacci, số đầu tiên chia hết cho 5 là: ");
+  while (count < countSL) {
+    count++;
+    if (previousNumber % 5 === 0) {
+      document.write(previousNumber);
+      break;
+    }
+    let sum = previousNumber + nextNumber;
+    previousNumber = nextNumber;
+    nextNumber = sum;
+  }
+</script>
+</body>
+</html>

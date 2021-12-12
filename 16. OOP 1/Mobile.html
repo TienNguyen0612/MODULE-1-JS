@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOBILE PHONE</title>
+</head>
+<body>
+<script>
+    class MobilePhone {
+        name
+        battery
+
+        constructor(name, battery) {
+            this.name = name;
+            this.battery = battery;
+            this.draftBox = [];
+            this.inBox = [];
+            this.sendBox = [];
+            this.status = false;
+        }
+
+        //Bật máy
+        // turnOn() {
+        //     return this.status = true;
+        // }
+
+        //Tắt máy
+        // turnOff() {
+        //     return this.status = false;
+        // }
+
+        //Bật/tắt máy
+        turnOnOff() {
+            this.status = !this.status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        //Kiểm tra pin
+        checkBattery() {
+            return this.battery > 0 ? true : false;
+        }
+
+        //Tạo tin nhắn ở draftBox
+        setMess(message) {
+            if (this.checkBattery() && this.getStatus()) {
+                this.message = message;
+                this.draftBox.push(message);
+                this.battery--;
+            }
+        }
+
+        //Sạc pin
+        chargeBattery(battery) {
+            this.battery = battery;
+        }
+
+        //Tạo tin nhắn ở inBox
+        setInbox(message) {
+            if (this.checkBattery() && this.getStatus()) {
+                this.inBox = this.inBox.concat(message);
+                this.battery--;
+            }
+        }
+
+        //Gửi tin nhắn
+        sendMess(phone) {
+            if (this.checkBattery() && this.getStatus() && phone.getStatus()) {
+                this.battery--;
+                phone.setInbox(this.draftBox);
+                this.sendBox = this.sendBox.concat(this.draftBox);
+                this.draftBox = [];
+            }
+        }
+    }
+
+    let nokia = new MobilePhone('nokia', 100);
+    let iphone = new MobilePhone('iphone', 100);
+</script>
+</body>
+</html>

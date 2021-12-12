@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SỐ NGUYÊN TỐ</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let countSL = prompt("Nhập vào số lượng số nguyên tố bạn muốn in ra:");
+    let number = 2;
+    document.write("Liệt kê " + countSL + " số nguyên tố đầu tiên:" + "<br>");
+
+    while (count < countSL) {
+        let flag = true;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            count++;
+            document.write(number + "<br>");
+        }
+        number++;
+    }
+</script>
+</body>
+</html>

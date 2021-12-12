@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calender</title>
+
+    <style>
+        table {
+            text-align: center;
+            padding: 10px;
+            border-collapse: collapse;
+            /*font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;*/
+        }
+
+        .T10 {
+            font-size: 20px;
+            color: blue;
+            padding: 10px;
+        }
+
+        .row1 {
+            color: white;
+            background-color: orange;
+            border: 1px solid white;
+            padding: 8px 10px;
+        }
+
+        .row2 {
+            padding: 5px 10px;
+        }
+
+        #col1 {
+            background-color: red;
+            color: white;
+        }
+
+        #col2 {
+            background-color: blue;
+            color: white;
+        }
+
+        .sun {
+            color: red;
+        }
+
+        .sat {
+            color: blue;
+        }
+
+        sub {
+            color: black;
+            font-size: 10px;
+            font-weight: normal;
+        }
+
+        .day {
+            border: 1px solid rgba(175,184,151,0.66);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th class="T10" colspan="7">Tháng 10 - October</th>
+    </tr>
+    <tr>
+        <td class="row1 sun" id="col1">C.Nhật</td>
+        <td class="row1">T.Hai</td>
+        <td class="row1">T.Ba</td>
+        <td class="row1">T.Tư</td>
+        <td class="row1">T.Năm</td>
+        <td class="row1">T.Sáu</td>
+        <td class="row1 sat" id="col2">T.Bảy</td>
+    </tr>
+    <tr>
+        <td class="row2 sun">Sun</td>
+        <td class="row2">Mon</td>
+        <td class="row2">Tue</td>
+        <td class="row2">Wed</td>
+        <td class="row2">Thu</td>
+        <td class="row2">Fri</td>
+        <td class="row2 sat">Sat</td>
+    </tr>
+    <tr>
+        <td class="day"></td>
+        <td class="day"></td>
+        <td class="day"></td>
+        <td class="day"></td>
+        <td class="day">1<sub>13</sub></td>
+        <td class="day">2<sub>14</sub></td>
+        <td class="sat day">3<sub>15</sub></td>
+    </tr>
+    <tr>
+        <td class="sun day">4<sub>16</sub></td>
+        <td class="day">5<sub>17</sub></td>
+        <td class="day">6<sub>18</sub></td>
+        <td class="day">7<sub>19</sub></td>
+        <td class="day">8<sub>20</sub></td>
+        <td class="day">9<sub>21</sub></td>
+        <td class="sat day">10<sub>22</sub></td>
+    </tr>
+    <tr>
+        <td class="sun day">11<sub>23</sub></td>
+        <td class="day">12<sub>24</sub></td>
+        <td class="day">13<sub>25</sub></td>
+        <td class="day">14<sub>26</sub></td>
+        <td class="day">15<sub>27</sub></td>
+        <td class="day">16<sub>28</sub></td>
+        <td class="sat day">17<sub>29</sub></td>
+    </tr>
+    <tr>
+        <td class="sun day">18<sub>1.9</sub></td>
+        <td class="day">19<sub>2</sub></td>
+        <td class="day">20<sub>3</sub></td>
+        <td class="day">21<sub>4</sub></td>
+        <td class="day">22<sub>5</sub></td>
+        <td class="day">23<sub>6</sub></td>
+        <td class="sat day">24<sub>7</sub></td>
+    </tr>
+    <tr>
+        <td class="sun day">25<sub>8</sub></td>
+        <td class="day">26<sub>9</sub></td>
+        <td class="day">27<sub>10</sub></td>
+        <td class="day">28<sub>11</sub></td>
+        <td class="day">29<sub>12</sub></td>
+        <td class="day">30<sub>13</sub></td>
+        <td class="sat day">31<sub>14</sub></td>
+    </tr>
+</table>
+</body>
+</html>

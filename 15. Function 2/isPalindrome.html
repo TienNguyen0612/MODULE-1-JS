@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập vào một chuỗi")
+
+    function isPalindrome(str) {
+        let arr = str.split("")
+        if (arr.join() === (arr.reverse()).join()) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    alert(isPalindrome(string))
+</script>
+</body>
+</html>

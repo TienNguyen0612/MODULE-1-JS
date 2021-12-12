@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let array = [30, 9, 7, 5, 3, 4, 2, 1, 6];
+    let array = [7,8,9,5,6,4,3,2,1,0];
+    // let array = [1,2,3,4,5,6,7,8]
+    function arr(arr) {
+        let max1 = 0;
+        let max2 = 0;
+        let max3 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max1) {
+                max1 = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (max2 < arr[i] && arr[i] < max1) {
+                max2 = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (max3 < arr[i] && arr[i] < max2) {
+                max3 = arr[i];
+            }
+        }
+        return max3;
+    }
+
+    console.log(arr(array));
+</script>
+</body>
+</html>

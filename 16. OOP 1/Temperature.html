@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        celcius
+
+        constructor(celcius) {
+            this.celcius = celcius
+        }
+
+        getFahrenheit() {
+            return (this.celcius * 9 / 5) - 32
+        }
+
+        getKelvin() {
+            return this.celcius + 273.15
+        }
+    }
+
+    let temperC = new Temperature(25)
+    document.write(`25 độ C tương đương với ${temperC.getFahrenheit()} độ F`)
+    document.write(` và ${temperC.getKelvin()} độ K`)
+</script>
+</body>
+</html>

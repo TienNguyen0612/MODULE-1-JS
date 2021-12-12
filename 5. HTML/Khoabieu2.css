@@ -1,0 +1,64 @@
+body {
+    padding: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.title1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color: deepskyblue;
+    border-color: white;
+}
+
+.title2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    color: deepskyblue;
+    border-color: white;
+}
+
+.title3 {
+    font-family: 'Open Sans', sans-serif;
+    color: deepskyblue;
+    font-size: 40px;
+}
+
+.title4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color: deepskyblue;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-bottom-color: black;
+}
+
+.week {
+    text-align: center;
+}
+
+.day {
+    background: yellow;
+    text-align: center;
+    font-weight: bold;
+}
+
+#id1 {
+    background: orange;
+    font-weight: bold;
+    text-align: center;
+}
+
+th {
+    padding: 20px;
+}
+

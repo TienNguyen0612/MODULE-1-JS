@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="soA" placeholder="Nhập số a">
+<input type="text" id="soB" placeholder="Nhập số b">
+<button type="button" onclick="showMessage()">Convert</button>
+
+<h1 id="display"></h1>
+<script>
+    //Bài 1: câu lệnh là:
+    // alert('Hello');
+
+    // Bài 2: câu lệnh là:
+    // let input = parseInt(prompt('Nhập 1 số:'));
+    // alert('Bình phương của số đó là: ' + (input * input));
+
+    // Bài 3: câu lệnh là:
+    function showMessage() {
+        let soA = document.getElementById("soA").value;
+        let soB = document.getElementById("soB").value;
+        document.getElementById("display").innerText = 'S = a * b = ' + (soA * soB);
+    }
+
+
+</script>
+</body>
+</html>

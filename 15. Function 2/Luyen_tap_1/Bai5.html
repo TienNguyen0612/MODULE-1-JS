@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body onload="display()">
+
+<script>
+    let wordInput = prompt("Nhập vào tên của ngôi sao:")
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubbhe", "Regulus"]
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function display() {
+        let index = 0
+        let flag = false
+        for (let i = 0; i < arr1.length; i++) {
+            if (wordInput === arr1[i]) {
+                flag = true
+                index = arr2[i]
+                break
+            }
+        }
+        if (flag) {
+            document.write(`Chòm sao tương ứng là: ${index}`)
+        } else {
+            document.write("Không tìm thấy ngôi sao nào !")
+        }
+    }
+</script>
+</body>
+</html>

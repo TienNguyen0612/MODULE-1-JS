@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkVowel(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].toLowerCase() === "u" || arr[i].toLowerCase() === "e" || arr[i].toLowerCase() === "o" || arr[i].toLowerCase() === "a" || arr[i].toLowerCase() === "i") {
+                count++;
+            }
+        }
+        return count !== 0;
+    }
+
+    let arr = prompt("Nhập vào một chuỗi:");
+    console.log(checkVowel(arr));
+</script>
+</body>
+</html>

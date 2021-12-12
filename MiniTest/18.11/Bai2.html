@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số lượng phần tử của mảng:")
+    let array = new Array(num);
+    let count = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Nhập vào phần tử thứ ${i + 1}:`)
+    }
+    let input = prompt("Nhập vào giá trị bất kỳ:")
+
+    for (let i = 0; i < array.length; i++) {
+        if (input === array[i]) {
+            count++;
+        }
+    }
+
+    document.write(`Số lượng tìm được: ${count}`)
+</script>
+</body>
+</html>

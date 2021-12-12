@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soA" placeholder="Nhập số a">
+<input type="text" id="soB" placeholder="Nhập số b">
+
+<button type="button" onclick="showMessage()">Kết quả</button>
+
+<p id="display"></p>
+<script>
+    function showMessage() {
+        let soA = document.getElementById("soA").value;
+        let soB = document.getElementById("soB").value;
+        document.getElementById("display").innerText = 'a^2 = ' + (soA ** 2) + '; a^b = ' + (soA ** soB);
+    }
+</script>
+</body>
+</html>

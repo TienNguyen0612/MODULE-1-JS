@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soA" placeholder="Nhập cạnh a">
+<input type="text" id="soB" placeholder="Nhập cạnh b">
+<input type="text" id="soC" placeholder="Nhập cạnh c">
+
+<button type="button" onclick="showMessage()">Kết quả</button>
+
+<p id="display"></p>
+<script>
+    function showMessage() {
+        let soA = parseInt(document.getElementById("soA").value);
+        let soB = parseInt(document.getElementById("soB").value);
+        let soC = parseInt(document.getElementById("soC").value);
+
+        if (soA > 0 && soB > 0 && soC > 0 && soA + soB > soC && soB + soC > soA && soC + soA > soB) {
+            if (soA === soB && soB === soC) {
+                document.getElementById("display").innerText = 'Đây là tam giác đều';
+            } else if (soA === soB || soB === soC || soC === soA) {
+                document.getElementById("display").innerText = 'Đây là tam giác cân';
+            } else if (soA ** 2 + soB ** 2 == soC ** 2 || soB ** 2 + soC ** 2 == soA ** 2 || soC ** 2 + soA ** 2 == soB ** 2) {
+                document.getElementById("display").innerText = 'Đây là tam giác vuông';
+            } else {
+                document.getElementById("display").innerText = 'Đây là 3 cạnh của tam giác';
+            }
+        } else {
+            document.getElementById("display").innerText = "Đây không phải là 3 cạnh của tam giác";
+        }
+    }
+</script>
+</body>
+</html>

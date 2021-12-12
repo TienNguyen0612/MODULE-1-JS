@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng một chiều</title>
+</head>
+<body>
+<script>
+    // let array = ["item1", "item2", "item3"];
+    // for (let i = 0; i < array.length; i++) {
+    //     console.log(`Index = ${i} __Value = ${array[i]}`);
+    // }
+
+    var stack = []; // stack: []
+    console.log(stack.push(1,2)); // stack: [1,2] Returns 2
+    console.log(stack.pop()); //stack: [1] Returns 2
+    console.log(stack.push(3)); // stack: [1,3] Returns 2
+    console.log(stack.pop()); // stack: [1] Returns 3
+    console.log(stack.push([4,5])); // stack: [1,[4,5]] Returns 2
+    console.log(stack.pop()); // stack: [1] Returns [4,5]
+    console.log(stack.pop()); // stack: [] Returns 1
+
+</script>
+</body>
+</html>

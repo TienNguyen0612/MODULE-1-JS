@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHANGE MONEY</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><label for="input"></label><input type="text" id="input"></td>
+            <td>
+                <label for="from"></label><select name="" id="from">
+                    <option value="1">VND</option>
+                    <option value="23000">USD</option>
+                </select>
+            </td>
+            <td>
+                <label for="to"></label><select name="" id="to">
+                    <option value="1">VND</option>
+                    <option value="23000">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="display()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <h2>Result: <span id="result"></span></h2>
+</form>
+
+<script>
+    function display() {
+
+        let input = parseInt(document.getElementById('input').value);
+        let from = parseInt(document.getElementById('from').value);
+        let to = parseInt(document.getElementById('to').value);
+
+        document.getElementById('result').innerText = input * from / to;
+    }
+</script>
+</body>
+</html>

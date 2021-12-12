@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [1,5,6,9,8,33,2,4,20,11,15];
+    let index = +prompt(`Nhập một số nguyên bất kỳ:`);
+    let checkNum = findIndex(index, arr);
+    function findIndex(index, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (index === arr[i]) {
+                return i;
+            }
+        }
+        return false;
+    }
+
+    if (checkNum === false) {
+        alert(`Số nguyên ${index} không nằm trong mảng`);
+    } else {
+        alert(`Số nguyên ${index} nằm ở vị trí ${checkNum} trong mảng`);
+    }
+</script>
+</body>
+</html>

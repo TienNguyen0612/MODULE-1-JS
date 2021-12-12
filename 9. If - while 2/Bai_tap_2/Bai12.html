@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất vay ngân hàng</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt('Nhập số tiền muốn vay: ', 'VND'));
+    let month = parseInt(prompt('Nhập kỳ hạn: ', 'tháng'));
+
+    //Lãi suất hàng tháng là 1%
+
+    alert('Tổng số tiền lãi là: ' + (money * (Math.pow(1.01,month) - 1)) + ' VND');
+</script>
+</body>
+</html>

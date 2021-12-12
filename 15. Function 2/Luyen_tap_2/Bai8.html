@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<p id="display1"></p>
+<p id="display2"></p>
+<script>
+    let number = +prompt("Nhập vào số lượng phần tử của mảng:")
+    let arr = new Array(number)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(`Nhập vào phần tử thứ ${i + 1}:`)
+    }
+
+    function reverseArr(arr) {
+        let last = arr.length - 1
+        for (let i = 0; i <= last; i++) {
+            let temp = arr[i]
+            arr[i] = arr[last]
+            arr[last] = temp
+            last--
+        }
+        return arr
+    }
+
+    document.getElementById("display1").innerHTML = (arr.join())
+    document.getElementById("display2").innerHTML = (reverseArr(arr).join())
+</script>
+</body>
+</html>

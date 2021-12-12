@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng theo doanh số</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt('Nhập doanh số bán hàng: ', '5000000 VND'));
+
+    if (input < 10000000) {
+        alert('Không nhận được hoa hồng');
+    } else if (input < 20000000) {
+        alert('Bạn nhận được hoa hồng: ' + (input * 5 / 100) + ' VND');
+    } else if (input < 30000000) {
+        alert('Bạn nhận được hoa hồng: ' + (input * 6 / 100) + ' VND');
+    } else if (input < 40000000) {
+        alert('Bạn nhận được hoa hồng: ' + (input * 7 / 100) + ' VND');
+    } else if (input < 50000000) {
+        alert('Bạn nhận được hoa hồng: ' + (input * 8 / 100) + ' VND');
+    } else {
+        alert('Bạn nhận được hoa hồng: ' + (input * 10 / 100) + ' VND');
+    }
+</script>
+</body>
+</html>

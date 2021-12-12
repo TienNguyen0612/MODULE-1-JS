@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giả phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let so1 = parseInt(prompt('Nhập giá trị a:'));
+    let so2 = parseInt(prompt('Nhập giá trị b:'));
+    let so3 = parseInt(prompt('Nhập giá trị c:'));
+    let delta = so2 * so2 - 4 * so1 * so3;
+
+    if (so1 == 0) {
+        if (so2 == 0) {
+            if (so3 == 0) {
+                alert('Phương trình có vô số nghiệm');
+            } else {
+                alert('Phương trình vô nghiệm');
+            }
+        } else {
+            alert('Phương trình có nghiệm là: ' + (-so3 / so2));
+        }
+    } else {
+        if (delta > 0) {
+            let x1 = (-so2 + Math.sqrt(delta)) / (2 * so1);
+            let x2 = (-so2 - Math.sqrt(delta)) / (2 * so1);
+            alert('Phương trình có 2 nghiệm x1: ' + x1 + '; x2: ' + x2);
+        } else if (delta == 0) {
+            alert('Phương trình có nghiệm là: ' + x1);
+        } else {
+            alert('Phương trình vô nghiệm');
+        }
+    }
+</script>
+</body>
+</html>

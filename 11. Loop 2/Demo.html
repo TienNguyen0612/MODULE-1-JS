@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME ĐOÁN SỐ</title>
+
+</head>
+<body>
+<button onclick="start()">Start</button>
+</body>
+
+<script>
+    function start() {
+        let num1 = parseInt(prompt("Nhập vào giá trị dưới: "))
+        let num2 = parseInt(prompt("Nhập vào giá trị trên: "))
+        if (num1 === num2) {
+            alert("Mời bạn nhập lại !!")
+            num1 = parseInt(prompt("Nhập vào giá trị dưới: "))
+            num2 = parseInt(prompt("Nhập vào giá trị trên: "))
+        }
+
+        let result
+        if (num1 < num2) {
+            result = Math.round(Math.random() * (num2 - num1) + num1)
+        } else {
+            result = Math.round(Math.random() * (num1 - num2) + num2)
+        }
+
+        let count = 1
+        let check = false
+        alert("Đoán đi bạn ơi !")
+        let guestNum = parseInt(prompt(`Đoán lần ${count}:`))
+
+        do {
+            if (guestNum === result) {
+                alert("You win !!")
+                check = true
+                break
+            } else if (guestNum < result) {
+                alert("Đoán tăng lên đi !")
+                guestNum = parseInt(prompt(`Đoán lần ${count + 1}:`))
+                count++
+            } else {
+                alert("Đoán giảm xuống đi !")
+                guestNum = parseInt(prompt(`Đoán lần ${count + 1}:`))
+                count++
+            }
+        }
+        while (count <= 2)
+        if (check === false) {
+            alert("You lose !")
+        }
+    }
+</script>
+</html>

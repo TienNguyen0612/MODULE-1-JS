@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi vay</title>
+</head>
+<body>
+<script>
+    // Lãi suất: 1%/tháng
+    let money = parseInt(prompt("Nhập số tiền muốn vay:" ,"VND"));
+    let month = parseInt(prompt("Nhập kỳ hạn muốn vay:" ,"tháng"));
+    let number = parseInt(prompt("Nhập lãi suất hàng tháng:", "%"));
+    let temp = money;
+
+    for (let i = 1; i <= month; i++) {
+        money += (money * (number / 100));
+    }
+
+    document.write(`Tổng số tiền lãi sau ${month} tháng là: ${money - temp} VND`)
+</script>
+</body>
+</html>

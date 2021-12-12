@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xét điều kiện tam giác</title>
+</head>
+<body>
+<script>
+    let so1 = +prompt('Nhập cạnh a:');
+    let so2 = +prompt('Nhập cạnh b:');
+    let so3 = +prompt('Nhập cạnh c:');
+
+    if (so1 > 0 && so2 > 0 && so3 > 0) {
+        if (so1 + so2 > so3) {
+            if (so2 + so3 > so1) {
+                if (so3 + so1 > so2) {
+                    alert('Đây là 3 cạnh của tam giác');
+                } else {
+                    alert('Đây không phải 3 cạnh của tam giác');
+                }
+            } else {
+                alert('Đây không phải 3 cạnh của tam giác');
+            }
+        } else {
+            alert('Đây không phải 3 cạnh của tam giác');
+        }
+    } else {
+        alert('Đây không phải 3 cạnh của tam giác');
+    }
+</script>
+</body>
+</html>

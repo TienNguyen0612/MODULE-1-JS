@@ -1,0 +1,34 @@
+table {
+    width: 600px;
+}
+
+#name {
+    width: 50%;
+}
+
+button {
+    width: 70px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: limegreen;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(162, 170, 139, 0.44);
+}
+
+td {
+    padding: 10px;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+}
+
+#title {
+    background-color: rgba(162, 170, 139, 0.44);
+    padding: 10px;
+    width: 40%;
+    border-radius: 10px;
+}

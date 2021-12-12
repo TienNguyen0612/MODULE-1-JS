@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="namA" placeholder="Nhập vào năm">
+
+<button type="button" onclick="showMessage()">Kết quả</button>
+<p id="display"></p>
+<script>
+    function showMessage() {
+        let namA = document.getElementById("namA").value;
+        document.getElementById("display").innerText = 'Năm ' + namA + ' ở thế kỉ ' + (Math.floor(namA / 100) + 1);
+    }
+</script>
+</body>
+</html>

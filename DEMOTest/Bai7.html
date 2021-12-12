@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ký tự nguyên âm</title>
+</head>
+<body>
+<script>
+    function checkVowel(str) {
+        let vowel = ["u", "e", "o", "a", "i"];
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < vowel.length; j++) {
+                if (str[i].toLowerCase() === vowel[j]) {
+                    count++;
+                }
+            }
+        }
+        if (count === 0) {
+            alert('false');
+        } else {
+            alert(`Chuỗi vừa nhập có: ${count} ký tự nguyên âm`);
+        }
+    }
+
+    let str = prompt(`Nhập vào một chuỗi bất kỳ:`);
+    checkVowel(str);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [2,3,5,6,8,9,10,14];
+    let index = +prompt("Nhập số nguyên bất kì:");
+    let checkNum = findIndex(arr, index);
+
+    function findIndex(arr, index) {
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i] === index) {
+                return i;
+            }
+        }
+        return false;
+
+    }
+    if (checkNum === false ) {
+        alert("Số nguyên " + index + " vừa nhập không nằm trong mảng");
+    } else {
+        alert("Số nguyên " + index + " vừa nhập nằm ở vị trí thứ: " + checkNum + " trong mảng");
+    }
+</script>
+</body>
+</html>

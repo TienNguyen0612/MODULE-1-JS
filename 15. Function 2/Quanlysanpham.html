@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<h1>All Product</h1>
+<p>
+    <input type="text" id="input1" placeholder="New Product"/>
+    <input type="button" id="add" value="Thêm" onclick="add(listProduct)"/>
+    <input type="text" id="input2"/>
+    <input type="button" id="fix" value="Sửa" onclick=""/>
+</p>
+<h3>Tên sản phẩm</h3>
+<table id="list"></table>
+
+</p>
+<script>
+    let listProduct = []
+
+    function add(product) {
+        let newProduct = document.getElementById("input1").value
+        product.push(newProduct)
+        document.getElementById("list").innerHTML = display(product)
+    }
+
+    function display(product) {
+        let nameProduct = `<tr>`
+        for (let i = 0; i < product.length; i++) {
+            nameProduct += `<td>${i + 1}.</td>`
+            nameProduct += `<td>${product[i]}</td>`
+            nameProduct += `<td> <button type="button" onclick="edit(listProduct, ${i})">edit</button></td>`
+            nameProduct += `<td> <button type="button" onclick="del(listProduct, ${i})">delete</button></td>`
+            nameProduct += `<td> <button type="button" onclick="view(listProduct, ${i})">view</button></td>`
+            nameProduct += `</tr>`
+        }
+        return nameProduct
+    }
+
+    function edit(product, j) {
+        let newProduct = prompt("Nhập tên mặt hàng thay thế:")
+        product[j] = newProduct
+        document.getElementById("list").innerHTML = display(product)
+    }
+
+    function del(product, j) {
+        product.splice(j, 1)
+        document.getElementById("list").innerHTML = display(product)
+    }
+
+    function view(product, j) {
+        document.getElementById("list").innerHTML = `Sản phẩm thứ ${j + 1} là: ${product[j]}`
+    }
+
+    document.getElementById("list").innerHTML = display(listProduct)
+</script>
+</body>
+</html>

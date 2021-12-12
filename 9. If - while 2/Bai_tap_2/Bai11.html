@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let input = +prompt('Nhập thu nhập cá nhân của bạn: ', 'VND');
+
+    if (input <= 5000000) {
+        alert('Thuế thu nhập cá nhân là: ' + (input * 5 / 100) + ' VND');
+    } else if (input <= 10000000) {
+        alert('Thuế thu nhập cá nhân là: ' + (input * 10 / 100 - 250000) + ' VND');
+    } else if (input <= 18000000) {
+        alert('Thuế thu nhập cá nhân là: ' + (input * 15 / 100 - 750000) + ' VND');
+    } else {
+        alert('Thuế thu nhập cá nhân là: ' + (input * 20 / 100 - 1650000) + ' VND');
+    }
+</script>
+</body>
+</html>

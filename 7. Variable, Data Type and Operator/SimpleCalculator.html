@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Calculator</h2>
+<table>
+    <tr>
+        <td colspan="2"><label><input id="input1" type="text"></label></td>
+        <td colspan="2"><label><input id="input2" type="text"></label></td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="add()">Add(+)</button>
+        </td>
+        <td>
+            <button type="button" onclick="sub()">Sub(-)</button>
+        </td>
+        <td>
+            <button type="button" onclick="multi()">Multi(*)</button>
+        </td>
+        <td>
+            <button type="button" onclick="div()">Div(/)</button>
+        </td>
+    </tr>
+</table>
+<p>Result Division: <span id="result"></span></p>
+</body>
+
+<script>
+    function add() {
+        let input1 = +document.getElementById('input1').value
+        let input2 = +document.getElementById('input2').value
+        document.getElementById('result').innerText = input1 + input2
+    }
+    function sub() {
+        let input1 = +document.getElementById('input1').value
+        let input2 = +document.getElementById('input2').value
+        document.getElementById('result').innerText = input1 - input2
+    }
+    function multi() {
+        let input1 = +document.getElementById('input1').value
+        let input2 = +document.getElementById('input2').value
+        document.getElementById('result').innerText = input1 * input2
+    }
+    function div() {
+        let input1 = +document.getElementById('input1').value
+        let input2 = +document.getElementById('input2').value
+        document.getElementById('result').innerText = input1 / input2
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    // let arrayA = [8, 6, 2, 3, 2, 4, 7, 6, 20, 30]
+    // let arrayB = [6, 3, 8, 6, 7, 6, 52, 4, 1, 26]
+    // let arrayC = arrayB.concat(arrayA)
+    //
+    // document.write(arrayC)
+    let arrA = new Array(10)
+
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = +prompt(`Nhập vào phần tử thứ ${i + 1}:`)
+    }
+    let arrB = new Array(10)
+
+    for (let j = 0; j < arrB.length; j++) {
+        arrB[j] = +prompt(`Nhập vào phần tử thứ ${j + 1}:`)
+    }
+
+    let arrC = arrB.concat(arrA);
+    document.write(`Mảng C là: ${arrC}`)
+</script>
+</body>
+</html>

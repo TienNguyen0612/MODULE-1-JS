@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt('Nhập số phút: '));
+
+    if (input < 100) {
+        alert('Tiền cước điện thoại là: ' + (input * 100) + ' VND');
+    } else if (input < 200) {
+        alert('Tiền cước điện thoại là: ' + (input * 120) + ' VND');
+    } else if (input < 300) {
+        alert('Tiền cước điện thoại là: ' + (input * 140) + ' VND');
+    } else if (input < 400) {
+        alert('Tiền cước điện thoại là: ' + (input * 160) + ' VND');
+    } else {
+        alert('Tiền cước điện thoại là: ' + (input * 180) + ' VND');
+    }
+</script>
+</body>
+</html>
